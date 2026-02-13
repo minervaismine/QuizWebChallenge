@@ -1,0 +1,122 @@
+.login-container {
+    display: flex;
+    background-color: #FFF9F0;
+    height: 100vh; /* tinggi layar penuh */
+    width: 100%;
+    overflow: hidden;
+}
+
+.login-left {
+    flex: 3.5;
+
+}
+
+.logo-text {
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    color: #2b2b2b;
+    padding-left: 70px;
+    padding-top: 40px;
+    z-index: 2; /* depan */
+}
+
+.background-login {
+    position: absolute;
+    height: 100vh; /* ikut tinggi layar */
+    width: auto;   /* lebar menyesuaikan */
+    z-index: 1; /* belakang */
+}
+
+.login-right {
+    flex: 6.5;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.login-title {
+    font-size: 55px;
+    color: #2b2b2b;
+    margin-bottom: 0px;
+}
+
+.login-subtitle {
+    font-size: 23px;
+    color: #2b2b2b;
+    margin-top: 0px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-username{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form-group-password{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2b2b2b;
+}
+
+input {
+    border-radius: 12px;
+    border: 0px;
+    background-color: #ffd93d;
+    width: 700px;
+    height: 38px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input::placeholder {
+    color: #909090;
+    font-size: 18px;
+    font-family: inherit;
+}
+
+button {
+    margin-top: 45px;
+    border-radius: 15px;
+    border: 0px;
+    margin-left: 300px;
+    margin-right: 400px;
+    width: 200px;
+    height: 40px;
+    background-color: #4d96ff;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #2b2b2b;
+}
+
+button:hover {
+    background-color: #2F7AE5;
+    cursor: pointer;
+}
+
+.register-text {
+    margin-top: 7px;
+    margin-left: 250px;
+    color: #2b2b2b;
+}
+
+.register-link {
+    color: #4d96ff;
+}
+
+.register-link:hover {
+  color: #2F7AE5;
+}
