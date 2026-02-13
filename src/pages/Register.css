@@ -50,6 +50,26 @@
     width: 90%;
 }
 
+.register-form button {
+    margin-top: 45px;
+    border-radius: 15px;
+    border: 0px;
+    margin-left: 300px;
+    margin-right: 400px;
+    width: 200px;
+    height: 40px;
+    background-color: #4d96ff;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #2b2b2b;
+}
+
+.register-form button:hover {
+    background-color: #2F7AE5;
+    cursor: pointer;
+}
+
 .register-grid-column {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 kolom */
@@ -111,6 +131,7 @@
 .swal-button {
     background-color: #4d96ff;
     align-items: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .swal-button:hover {

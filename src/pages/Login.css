@@ -87,7 +87,7 @@ label {
     font-family: inherit;
 }
 
-button {
+.login-form button {
     margin-top: 45px;
     border-radius: 15px;
     border: 0px;
@@ -102,7 +102,7 @@ button {
     color: #2b2b2b;
 }
 
-button:hover {
+.login-form button:hover {
     background-color: #2F7AE5;
     cursor: pointer;
 }
@@ -128,6 +128,7 @@ button:hover {
 .swal-button {
     background-color: #4d96ff;
     align-items: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .swal-button:hover {
