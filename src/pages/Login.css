@@ -120,3 +120,16 @@ button:hover {
 .register-link:hover {
   color: #2F7AE5;
 }
+
+.swal-title, .swal-text {
+    color: #2b2b2b;
+}
+
+.swal-button {
+    background-color: #4d96ff;
+    align-items: center;
+}
+
+.swal-button:hover {
+    background-color: #2F7AE5;
+}

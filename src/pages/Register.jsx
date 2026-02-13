@@ -143,6 +143,7 @@ function Register() {
             <div className="form-group-confirm-password">
               <label>Confirm Password</label>
               <input type="password" placeholder="Re-enter your password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+              {error.confirmPassword && <p className="error-text">{error.confirmPassword}</p>}
             </div>
           </div>
 
