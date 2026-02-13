@@ -1,0 +1,94 @@
+.register-container {
+    display: flex;
+    background-color: #FFF9F0;
+    height: 100vh; /* tinggi layar penuh */
+    width: 100%;
+    overflow: hidden;
+}
+
+.register-left {
+    flex: 3.5;
+}
+
+.logo-text {
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    color: #2b2b2b;
+    padding-left: 70px;
+    padding-top: 40px;
+    z-index: 2; /* depan */
+}
+
+.background-register {
+    position: absolute;
+    height: 100vh; /* ikut tinggi layar */
+    width: auto;   /* lebar menyesuaikan */
+    z-index: 1; /* belakang */
+}
+
+.register-right {
+    flex: 6.5;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.register-title {
+    font-size: 55px;
+    color: #2b2b2b;
+    margin-bottom: 0px;
+}
+
+.register-subtitle {
+    font-size: 23px;
+    color: #2b2b2b;
+    margin-top: 0px;
+}
+
+.register-form {
+    width: 90%;
+}
+
+.register-grid-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 kolom */
+  width: 100%;
+}
+
+.form-group-email{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form-group-confirm-password{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+input {
+    border-radius: 12px;
+    border: 0px;
+    background-color: #ffd93d;
+    width: 350px;
+    height: 38px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login-text {
+    margin-top: 7px;
+    margin-left: 250px;
+    color: #2b2b2b;
+}
+
+.login-link {
+    color: #4d96ff;
+}
+
+.login-link:hover {
+  color: #2F7AE5;
+}
