@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <div className="home-wrapper">
-      {/* Navbar */}
+      {/* NAVBAR */}
       <nav className="navbar">
         <span className="navbar-logo" onClick={() => navigate("/")}>Quizzme.</span>
 

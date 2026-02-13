@@ -88,6 +88,12 @@
     margin-top: 20px;
 }
 
+.register-form label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2b2b2b;
+}
+
 .register-form input {
     border-radius: 12px;
     border: 0px;
