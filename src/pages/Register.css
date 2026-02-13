@@ -68,7 +68,7 @@
     margin-top: 20px;
 }
 
-input {
+.register-form input {
     border-radius: 12px;
     border: 0px;
     background-color: #ffd93d;
@@ -77,6 +77,12 @@ input {
     font-family: "Poppins", sans-serif;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.register-form input::placeholder {
+    color: #909090;
+    font-size: 18px;
+    font-family: inherit;
 }
 
 .login-text {
@@ -91,4 +97,27 @@ input {
 
 .login-link:hover {
   color: #2F7AE5;
+}
+
+.error-text {
+    color: #FF6B6B;
+    margin-top: 4px;
+}
+
+.swal-title {
+    color: #2b2b2b;
+}
+
+.swal-text {
+    color: #2b2b2b;
+    padding-top: 0px;
+}
+
+.swal-button {
+    background-color: #4d96ff;
+    align-items: center;
+}
+
+.swal-button:hover {
+    background-color: #2F7AE5;
 }
