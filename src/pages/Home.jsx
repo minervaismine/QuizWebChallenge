@@ -23,7 +23,7 @@ function Home() {
         </div>
       </nav>
 
-      {/* CONTENT HOME */}
+      {/* CONTENT */}
       <div className="hero">
         <img src={backgroundHero} alt="Hero Background" className="hero-image"/>
 

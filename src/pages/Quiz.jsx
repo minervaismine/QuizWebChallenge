@@ -11,7 +11,9 @@ function Quiz() {
   const [difficulty, setDifficulty] = useState("");
   const [type, setType] = useState("");
 
-  const startQuiz = async () => {
+  const startQuiz = async (e) => {
+    e.preventDefault(); // penting karena pakai <form>
+
     let url = `https://opentdb.com/api.php?amount=${amount}`;
 
     if (category) url += `&category=${category}`;
@@ -21,7 +23,12 @@ function Quiz() {
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data.results);
+    if (!data.results || data.results.length === 0) {
+        alert("No questions found! Please change your filters.");
+        return; // stop function, jangan lanjut ke navigate
+    }
+
+    navigate("/quiz/start", { state: { questions: data.results } });
   };    
 
   return (
@@ -42,7 +49,7 @@ function Quiz() {
             </div>
         </nav>
 
-        {/* CONTENT HOME */}
+        {/* CONTENT */}
         <div className="quiz-hero">
             <img src={backgroundWelcome} alt="Welcome Quiz Background" className="quiz-welcome-image"/>
     
@@ -58,42 +65,54 @@ function Quiz() {
         <div className="quiz-setup">
             <h1>Let's prepare your quiz first!</h1>
 
-            <div className="quiz-setup-form">
-                {/* Number of Questions */}
-                <label>Number of Questions</label>
-                <input type="number" value={amount} min="1" max="50" onChange={(e) => setAmount(e.target.value)}/>
+            <form className="quiz-setup-form" onSubmit={startQuiz}>
+                <div className="setup-grid-column">
+                    {/* Row 1 */}
+                    {/* Number of Questions */}
+                    <div className="form-group-amount">
+                        <label>Number of Questions</label>
+                        <input type="number" value={amount} min="1" max="50" onChange={(e) => setAmount(e.target.value)}/>
+                    </div>
+                    
+                    <div className="form-group-category">
+                        {/* Category */}
+                        <label>Category</label> 
+                        <select value={category} onChange={(e) => setCategory(e.target.value)}> 
+                            <option value="">Any Category</option> 
+                            <option value="9">General Knowledge</option> 
+                            <option value="21">Sports</option> 
+                            <option value="23">History</option> 
+                            <option value="17">Science & Nature</option> 
+                            <option value="20">Mythology</option> 
+                            <option value="11">Film</option> 
+                        </select>
+                    </div>
+                    
+                    {/* Row 2 */}
+                    <div className="form-group-difficulty">
+                        {/* Difficulty */}
+                        <label>Difficulty</label>
+                        <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
+                            <option value="">Any Difficulty</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
 
-                {/* Category */}
-                <label>Category</label> 
-                <select value={category} onChange={(e) => setCategory(e.target.value)}> 
-                    <option value="">Any Category</option> 
-                    <option value="9">General Knowledge</option> 
-                    <option value="21">Sports</option> 
-                    <option value="23">History</option> 
-                    <option value="17">Science & Nature</option> 
-                    <option value="20">Mythology</option> 
-                    <option value="11">Film</option> 
-                </select>
+                    <div className="form-group-type">
+                        {/* Type */}
+                        <label>Question Type</label>
+                        <select value={type} onChange={(e) => setType(e.target.value)}>
+                            <option value="">Any Type</option>
+                            <option value="multiple">Multiple Choice</option>
+                            <option value="boolean">True / False</option>
+                        </select>
+                    </div>
+                </div>
 
-                {/* Difficulty */}
-                <label>Difficulty</label>
-                <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
-                    <option value="">Any Difficulty</option>
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-
-                {/* Type */}
-                <label>Question Type</label>
-                <select value={type} onChange={(e) => setType(e.target.value)}>
-                    <option value="">Any Type</option>
-                    <option value="multiple">Multiple Choice</option>
-                    <option value="boolean">True / False</option>
-                </select>
-
-                <button onClick={startQuiz}>Start Quiz 🚀</button>
-            </div>
+                <button type="submit">Start Quiz</button>
+            </form>
         </div>
     </div>
   );
