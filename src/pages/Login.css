@@ -127,6 +127,8 @@
 
 .swal-button {
     background-color: #4d96ff;
+    color: #2b2b2b;
+    font-weight: bold;
     align-items: center;
     font-family: "Poppins", sans-serif;
 }

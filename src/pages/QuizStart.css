@@ -1,0 +1,197 @@
+
+.no-questions-wrapper {
+  height: 900px;
+  margin: 0px auto; /* ini yang membuat center */
+  overflow: hidden;
+  position: relative;
+  background-color: #FFF9F0;
+}
+
+.no-questions-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.no-questions {
+  position: absolute;
+  inset: 0; /* memenuhi hero */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* center vertical */
+  align-items: center; /* center horizontal */
+  text-align: center;
+  color: #2b2b2b;
+  padding-top: 120px;
+}
+
+.quiz-start-wrapper {
+  background-color: #FFF9F0;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.quiz-start-wrapper h1 {
+  margin: 0;
+}
+
+/* Navbar Styles */
+.navbar-quiz-start {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.navbar-quiz-start-logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #2b2b2b;
+  padding-left: 70px;
+}
+
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 70px;
+
+}
+
+.progress-circle {
+  --size: 70px;
+  --progress: 0;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  color: #ff6b6b;
+  font-size: 18px;
+
+  background:
+    conic-gradient(
+      #ff6b6b calc(var(--progress) * 1%),
+      #d1d5db 0
+    );
+
+  position: relative;
+}
+
+.progress-circle::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: #FFF9F0;
+  border-radius: 50%;
+}
+
+.progress-circle span {
+  position: relative;
+  z-index: 2;
+}
+
+.quiz-card {
+  background-color: #ffd93d;
+  margin-top: 45px;
+  margin-left: 70px;
+  margin-right: 70px;
+  border-radius: 15px;
+}
+
+.quiz-card p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: #2b2b2b;
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+
+.question-card h1 {
+  text-align: center;
+  color: #2b2b2b;
+  font-size: 40px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.answers {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.answers button {
+  border: none;
+  border-radius: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  background-color: #4d96ff;
+  height: 100px;
+  width: 250px;
+}
+
+.answers button:hover {
+  cursor: pointer;
+  background-color: #2F7AE5;
+}
+
+.bottom-menu {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.back-icon {
+  width: 40px;
+  height: auto;
+  margin-left: 80px;
+  cursor: pointer;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  width: 220px;
+  height: 10px;
+  background-color: #00000026;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #ff6b6b;;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-weight: bold;
+  font-size: 18px;
+  color: #2b2b2b;
+  min-width: 50px;
+}
+
+.timer {
+  margin-right: 80px;
+  font-weight: bold;
+  font-size: 18px;
+}
+

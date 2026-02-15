@@ -5,14 +5,14 @@
 }
 
 /* Navbar Styles */
-.navbar {
+.navbar-quiz {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar-logo {
+.navbar-quiz-logo {
   font-size: 40px;
   font-weight: bold;
   color: #2b2b2b;
@@ -21,14 +21,14 @@
   cursor: pointer;
 }
 
-.navbar ul {
+.navbar-quiz ul {
   flex: 1;
   list-style: none;
   text-align: center;
   padding-top: 40px;
 }
 
-.navbar ul li {
+.navbar-quiz ul li {
   display: inline-block;
   margin-left: 15px;
   margin-right: 20px;
@@ -204,4 +204,9 @@
   font-weight: bold;
   font-size: 20px;
   color: #2b2b2b;
+}
+
+.quiz-setup-form button:hover {
+  background-color: #2F7AE5;
+  cursor: pointer;
 }

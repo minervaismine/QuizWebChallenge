@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import backgroundWelcome from "../assets/background_welcome_quiz.png";
 import downIcon from "../assets/scroll_down_icon.png";
+import Swal from "sweetalert2";
 
 function Quiz() {
   const navigate = useNavigate();
@@ -24,7 +25,17 @@ function Quiz() {
     const data = await response.json();
 
     if (!data.results || data.results.length === 0) {
-        alert("No questions found! Please change your filters.");
+        Swal.fire({
+            icon: "warning",
+            title: "No Questions Found",
+            text: "Please change your filters.",
+            confirmButtonText: "OK",
+            customClass: {
+                title: "swal-title",
+                content: "swal-text",
+                confirmButton: "swal-button"
+            },
+        });
         return; // stop function, jangan lanjut ke navigate
     }
 
@@ -34,8 +45,8 @@ function Quiz() {
   return (
     <div className="quiz-wrapper">
         {/* NAVBAR */}
-        <nav className="navbar">
-            <span className="navbar-logo" onClick={() => navigate("/")}>Quizzme.</span>
+        <nav className="navbar-quiz">
+            <span className="navbar-quiz-logo" onClick={() => navigate("/")}>Quizzme.</span>
 
             <ul>
             <li><Link to="/" className="nav-item">Home</Link></li>

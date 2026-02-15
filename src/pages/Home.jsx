@@ -8,8 +8,8 @@ function Home() {
   return (
     <div className="home-wrapper">
       {/* NAVBAR */}
-      <nav className="navbar">
-        <span className="navbar-logo" onClick={() => navigate("/")}>Quizzme.</span>
+      <nav className="navbar-home">
+        <span className="navbar-home-logo" onClick={() => navigate("/")}>Quizzme.</span>
 
         <ul>
           <li><Link to="/" className="nav-item">Home</Link></li>
