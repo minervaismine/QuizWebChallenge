@@ -1,0 +1,70 @@
+.navbar-home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-home-logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #2b2b2b;
+  padding-left: 70px;
+  padding-top: 40px;
+  cursor: pointer;
+}
+
+.navbar-home ul {
+  flex: 1;
+  list-style: none;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.navbar-home ul li {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav-item {
+  color: #2b2b2b;
+  text-decoration: none;
+  padding: 7px 12px;
+  border-radius: 10px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #ff6b6b;
+}
+
+.nav-item.active {
+  background-color: #ff6b6b;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-right {
+  padding-right: 70px;
+  padding-top: 40px;
+}
+
+.navbar-login-button {
+  border-radius: 15px;
+  border: 0px;
+  width: 150px;
+  height: 40px;
+  background-color: #ff6b6b;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #2b2b2b;
+}
+
+.navbar-login-button:hover {
+  cursor: pointer;
+  background-color: #e85a5a;
+}

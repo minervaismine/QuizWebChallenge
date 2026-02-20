@@ -1,4 +1,5 @@
 import "./Quiz.css";
+import Navbar from "../components/Navbar";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import backgroundWelcome from "../assets/background_welcome_quiz.png";
@@ -45,20 +46,7 @@ function Quiz() {
   return (
     <div className="quiz-wrapper">
         {/* NAVBAR */}
-        <nav className="navbar-quiz">
-            <span className="navbar-quiz-logo" onClick={() => navigate("/")}>Quizzme.</span>
-
-            <ul>
-            <li><Link to="/" className="nav-item">Home</Link></li>
-            <li><Link to="/quiz" className="nav-item">Quiz</Link></li>
-            <li><Link to="/leaderboard" className="nav-item">Leaderboard</Link></li>
-            <li><Link to="/about" className="nav-item">About</Link></li>
-            </ul>
-
-            <div className="navbar-right">
-            <button className="navbar-login-button" onClick={() => navigate("/login")}>Sign In</button>
-            </div>
-        </nav>
+        <Navbar />
 
         {/* CONTENT */}
         <div className="quiz-hero">

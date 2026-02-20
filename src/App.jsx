@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -7,6 +8,8 @@ import Quiz from "./pages/Quiz";
 import QuizStart from "./pages/QuizStart";
 
 function App() {
+  <Navbar />
+
   return (
     <BrowserRouter>
       <Routes>
