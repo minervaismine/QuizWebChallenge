@@ -1,8 +1,27 @@
-import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function Navbar() {
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const loginStatus = localStorage.getItem("isLoggedIn");
+    setIsLoggedIn(loginStatus === "true");
+  }, []);
+
+  const handleAuthClick = () => {
+    if (isLoggedIn) {
+      // SIGN OUT
+      localStorage.removeItem("isLoggedIn");
+      setIsLoggedIn(false);
+      navigate("/");
+    } else {
+      // SIGN IN
+      navigate("/login");
+    }
+  };
 
   return (
     <nav className="navbar-home">
@@ -16,7 +35,9 @@ function Navbar() {
       </ul>
 
       <div className="navbar-right">
-        <button className="navbar-login-button" onClick={() => navigate("/login")}>Sign In</button>
+        <button className="navbar-login-button" onClick={handleAuthClick}>
+          {isLoggedIn ? "Sign Out" : "Sign In"}
+        </button>
       </div>
     </nav>
   );

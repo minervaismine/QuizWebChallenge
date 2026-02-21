@@ -54,6 +54,7 @@
 
 .hero-buttons button:hover {
   background-color: #f4c400;
+  transform: translateY(-2px);
 }
 
 .features-highlight {

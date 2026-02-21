@@ -59,6 +59,9 @@ function Login() {
 
         // Cek login
         if (username === userData.username && password === userData.password) {
+
+            localStorage.setItem("isLoggedIn", "true");
+
             Swal.fire({
                 icon: "success",
                 title: "Login Successful!!",
